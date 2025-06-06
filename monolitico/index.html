@@ -21,15 +21,19 @@
         </div>
         
         <div class="task-section" id="taskSection" style="display: none;">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
             <h2>Mis Tareas</h2>
-            <div class="task-input-group">
+            <button class="btn-danger" onclick="logout()">Cerrar sesión</button>
+        </div>
+        <div class="task-input-group">
             <input type="text" id="newTask" placeholder="Nueva tarea">
             <input type="datetime-local" id="taskDateTime">
             <button class="btn-primary" onclick="addTask()">Agregar</button>
-            </div>
-            <ul id="taskList"></ul>
         </div>
-    </div>
+        <ul id="taskList"></ul>
+        </div>
+
+        </div>
     
     <script src="app.js"></script>
 </body>

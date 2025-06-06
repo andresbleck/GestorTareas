@@ -125,6 +125,12 @@ button {
   font-size: 1.1rem;
   color: var(--dark);
   word-break: break-word;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.task-text:hover {
+  color: var(--primary);
 }
 
 .task-actions {
@@ -132,6 +138,54 @@ button {
   gap: 0.5rem;
 }
 
+#taskList li .task-actions button:first-child {
+  background-color: var(--accent);
+  color: white;
+}
+
+#taskList li .task-actions button:first-child:hover {
+  background-color: var(--primary);
+}
+
+#taskList li .task-actions button:last-child {
+  background-color: var(--danger);
+}
+
+#taskList li .task-actions button:last-child:hover {
+  background-color: #d91a6d;
+}
+
+/* Modo edición */
+#taskList li.editing {
+  display: flex;
+  flex-direction: column;
+  background-color: #eef2ff;
+  padding: 1rem;
+  border: 2px dashed var(--primary);
+}
+
+#taskList li.editing input[type="text"] {
+  width: 100%;
+  padding: 0.6rem;
+  font-size: 1rem;
+  border: 2px solid var(--accent);
+  border-radius: 8px;
+  margin-bottom: 0.8rem;
+  box-sizing: border-box;
+}
+
+#taskList li.editing .edit-controls {
+  display: flex;
+  gap: 10px;
+  align-self: flex-end;
+}
+
+#taskList li.editing .edit-controls button {
+  padding: 0.6rem 1rem;
+  font-size: 0.85rem;
+}
+
+/* Animaciones */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -143,7 +197,6 @@ button {
   }
 }
 
-/* Efecto para cuando se agrega una nueva tarea */
 .new-task {
   animation: popIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
@@ -159,49 +212,50 @@ button {
   }
 }
 
-/* Responsive design */
+/* Responsive */
 @media (max-width: 768px) {
   body {
     padding: 1rem;
   }
-  
+
   .container {
     padding: 1.5rem;
   }
-  
+
   #taskList li {
     flex-direction: column;
     align-items: flex-start;
     gap: 0.8rem;
   }
-  
+
   .task-actions {
     align-self: flex-end;
   }
 }
 
+/* Inputs para fecha y descripción */
 .task-input-group {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 1rem;
-    align-items: center;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 1rem;
+  align-items: center;
 }
 
 .task-input-group input[type="datetime-local"] {
-    padding: 0.7rem;
-    border: 2px solid var(--gray);
-    border-radius: 8px;
-    font-size: 0.9rem;
+  padding: 0.7rem;
+  border: 2px solid var(--gray);
+  border-radius: 8px;
+  font-size: 0.9rem;
 }
 
 .task-content {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 .task-date {
-    font-size: 0.8rem;
-    color: var(--gray);
-    margin-top: 0.3rem;
+  font-size: 0.8rem;
+  color: var(--gray);
+  margin-top: 0.3rem;
 }

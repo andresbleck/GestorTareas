@@ -21,10 +21,12 @@ function register() {
 function login() {
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
-    
+
     const user = users.find(u => u.username === username && u.password === password);
     if (user) {
         currentUser = username;
+        localStorage.setItem('currentUser', currentUser);
+        document.querySelector('.auth-section').style.display = 'none';
         document.getElementById('taskSection').style.display = 'block';
         loadTasks();
         alert('Inicio de sesión exitoso');
@@ -32,6 +34,28 @@ function login() {
         alert('Credenciales incorrectas');
     }
 }
+
+function logout() {
+    currentUser = null;
+    localStorage.removeItem('currentUser');
+    document.getElementById('taskSection').style.display = 'none';
+    document.querySelector('.auth-section').style.display = 'block';
+}
+//verif asi hay ususario logueado
+window.onload = () => {
+    currentUser = localStorage.getItem('currentUser');
+    if (currentUser) {
+        document.querySelector('.auth-section').style.display = 'none';
+        document.getElementById('taskSection').style.display = 'block';
+        loadTasks();
+    } else {
+        document.querySelector('.auth-section').style.display = 'block';
+        document.getElementById('taskSection').style.display = 'none';
+    }
+};
+
+
+
 
 // Funciones de tareas
 function addTask() {
