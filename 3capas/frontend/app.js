@@ -212,9 +212,10 @@ async function deleteTask(taskId) {
             method: 'DELETE'
         });
         
-        const result = await response.json();
-        
-        if (!response.ok) throw new Error(result.error || 'Error al eliminar tarea');
+        if (!response.ok) {
+            const text = await response.text();
+            throw new Error(text || 'Error al eliminar tarea');
+        }
         
         await loadTasks();
     } catch (error) {
