@@ -36,6 +36,15 @@
       "completed": false,
       "createdAt": "2025-06-06T21:39:38.044Z",
       "updatedAt": "2025-06-06T22:32:10.708Z"
+    },
+    {
+      "id": 1749488745880,
+      "text": "Tarea ingles",
+      "datetime": "2025-06-12T09:00",
+      "user": "juanbene10",
+      "completed": false,
+      "createdAt": "2025-06-09T17:05:45.880Z",
+      "updatedAt": "2025-06-09T17:18:32.630Z"
     }
   ]
 }
