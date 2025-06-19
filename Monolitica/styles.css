@@ -109,13 +109,18 @@
     flex: 1;
   }
   
-  .btn-add {
+  .btn-add, .btn-success {
     background-color: #4169E1;
     color: white;
     padding: 12px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    font-weight: 500;
+    transition: background-color 0.2s;
   }
   
-  .btn-add:hover {
+  .btn-add:hover, .btn-success:hover {
     background-color: #3558c7;
   }
   
@@ -199,16 +204,17 @@
     gap: 8px;
   }
   
-  .btn-success {
-    background-color: #4CAF50;
+  .btn-cancel {
+    background-color: #FF1493;
     color: white;
-    padding: 8px 12px;
-    border-radius: 6px;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    font-weight: 500;
+    transition: background-color 0.2s;
   }
   
-  .btn-cancel {
-    background-color: #666;
-    color: white;
-    padding: 8px 12px;
-    border-radius: 6px;
+  .btn-cancel:hover {
+    background-color: #ff0084;
   } 

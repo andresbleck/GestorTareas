@@ -87,7 +87,6 @@ function addTask() {
 
 function loadTasks() {
     if (!currentUser) return;
-    
     const userTasks = tasks.filter(t => t.user === currentUser);
     renderTasks(userTasks);
 }
@@ -105,10 +104,10 @@ function renderTasks(tasks) {
                 <div class="edit-task-content">
                     <input type="text" id="edit-text-${task.id}" value="${escapeHtml(task.text)}" class="input-field">
                     <input type="datetime-local" id="edit-date-${task.id}" value="${task.datetime || ''}" class="input-field">
-                    <div class="edit-buttons">
-                        <button class="btn btn-add" onclick="saveTask(${task.id})">Guardar</button>
-                        <button class="btn btn-logout" onclick="cancelEdit()">Cancelar</button>
-                    </div>
+                </div>
+                <div class="task-actions">
+                    <button class="btn-edit" onclick="saveTask(${task.id})">Guardar</button>
+                    <button class="btn-delete" onclick="cancelEdit()">Cancelar</button>
                 </div>
             `;
         } else {
