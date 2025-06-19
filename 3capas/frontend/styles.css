@@ -17,17 +17,19 @@ body {
 .container {
   background-color: white;
   padding: 40px;
-  border-radius: 20px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(65, 105, 225, 0.08);
   width: 100%;
-  max-width: 800px;
+  max-width: 900px;
 }
 
 h1 {
   color: #4169E1;
   text-align: center;
   margin-bottom: 30px;
-  font-size: 2.5em;
+  font-size: 3em;
+  font-weight: 700;
+  letter-spacing: 1px;
 }
 
 h2 {
@@ -188,27 +190,54 @@ h2 {
   background-color: #ff0084;
 }
 
+.edit-buttons {
+  display: flex;
+  gap: 8px;
+  margin-left: auto;
+}
+
 .edit-task-content {
   display: flex;
   gap: 10px;
   width: 100%;
-}
-
-.edit-buttons {
-  display: flex;
-  gap: 8px;
+  align-items: center;
 }
 
 .btn-success {
-  background-color: #4CAF50;
+  background-color: #4169E1;
   color: white;
-  padding: 8px 12px;
+  padding: 8px 16px;
   border-radius: 6px;
+  font-size: 0.9em;
+  border: none;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.btn-success:hover {
+  background-color: #3558c7;
 }
 
 .btn-cancel {
-  background-color: #666;
+  background-color: #FF1493;
   color: white;
-  padding: 8px 12px;
+  padding: 8px 16px;
   border-radius: 6px;
+  font-size: 0.9em;
+  border: none;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.btn-cancel:hover {
+  background-color: #ff0084;
+}
+
+.edit-task-content input[type="text"],
+.edit-task-content input[type="datetime-local"] {
+  padding: 15px;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  font-size: 1em;
+  background-color: #fff;
 }
