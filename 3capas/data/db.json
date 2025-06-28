@@ -36,6 +36,24 @@
       "completed": false,
       "createdAt": "2025-06-06T21:39:38.044Z",
       "updatedAt": "2025-06-19T01:23:34.912Z"
+    },
+    {
+      "id": 1751145448885,
+      "text": "Ingles",
+      "datetime": "2025-06-28T22:00",
+      "user": "juanbene10",
+      "completed": false,
+      "createdAt": "2025-06-28T21:17:28.885Z",
+      "updatedAt": "2025-06-28T21:41:43.827Z"
+    },
+    {
+      "id": 1751146799961,
+      "text": "Economia",
+      "datetime": "2025-06-07T20:40",
+      "user": "juanbene10",
+      "completed": false,
+      "createdAt": "2025-06-28T21:39:59.961Z",
+      "updatedAt": "2025-06-28T21:41:47.780Z"
     }
   ]
 }

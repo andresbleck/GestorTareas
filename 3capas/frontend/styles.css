@@ -148,6 +148,62 @@ h2 {
 
 .task-content {
   flex-grow: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  margin: 10px 0;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border-left: 4px solid #007bff;
+  transition: all 0.3s ease;
+}
+
+.task-completed {
+  background: #e8f5e8 !important;
+  border-left-color: #28a745 !important;
+}
+
+.task-completed .task-text {
+  text-decoration: line-through;
+  color: #6c757d;
+}
+
+.task-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  flex: 1;
+}
+
+.task-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 5px;
+}
+
+.status-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.status-pending {
+  background-color: #ffc107;
+  border: 2px solid #e0a800;
+}
+
+.status-completed {
+  background-color: #28a745;
+  border: 2px solid #218838;
+}
+
+.status-text {
+  font-size: 0.9em;
+  font-weight: 500;
+  color: #495057;
 }
 
 .task-text {
@@ -240,4 +296,34 @@ h2 {
   border-radius: 12px;
   font-size: 1em;
   background-color: #fff;
+}
+
+.btn-complete {
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 0.9em;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-complete:hover {
+  background: #218838;
+}
+
+.btn-pending {
+  background: #ffc107;
+  color: #212529;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 0.9em;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-pending:hover {
+  background: #e0a800;
 }

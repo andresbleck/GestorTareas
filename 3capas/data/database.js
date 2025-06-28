@@ -66,6 +66,16 @@ module.exports = {
         return task;
     },
 
+    toggleTaskComplete: (id) => {
+        const task = data.tasks.find(t => t.id === id);
+        if (!task) throw new Error('Tarea no encontrada');
+        
+        task.completed = !task.completed;
+        task.updatedAt = new Date().toISOString();
+        save();
+        return task;
+    },
+
     deleteTask: (id) => {
         data.tasks = data.tasks.filter(t => t.id !== id);
         save();

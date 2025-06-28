@@ -98,6 +98,43 @@ app.put('/tasks/:id', async (req, res) => {
     }
 });
 
+// Endpoint para toggle de completado
+app.put('/tasks/:id/toggle', (req, res) => {
+    console.log('Toggle endpoint llamado con:', req.params.id, req.body);
+    const taskId = parseInt(req.params.id);
+    const user = req.body.user;
+
+    if (isNaN(taskId)) {
+        console.log('ID inválido:', req.params.id);
+        return res.status(400).json({ error: 'ID de tarea inválido' });
+    }
+
+    try {
+        const existingTask = db.getTaskById(taskId);
+        console.log('Tarea encontrada:', existingTask);
+        if (!existingTask) {
+            console.log('Tarea no encontrada');
+            return res.status(404).json({ error: 'Tarea no encontrada' });
+        }
+
+        // Verificar que la tarea pertenece al usuario
+        if (existingTask.user !== user) {
+            console.log('Usuario no autorizado:', user, 'vs', existingTask.user);
+            return res.status(403).json({ error: 'No tienes permisos para modificar esta tarea' });
+        }
+
+        const updatedTask = db.toggleTaskComplete(taskId);
+        console.log('Tarea actualizada:', updatedTask);
+        return res.status(200).json(updatedTask);
+
+    } catch (error) {
+        console.error('Error al cambiar estado de tarea:', error);
+        return res.status(500).json({
+            error: 'Error interno del servidor',
+            details: error.message
+        });
+    }
+});
 
 // Endpoint para eliminar tarea
 app.delete('/tasks/:id', (req, res) => {
