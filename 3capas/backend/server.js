@@ -50,14 +50,23 @@ app.get('/tasks', (req, res) => {
     }
 });
 
-
+// Endpoint para obtener categorías únicas de un usuario
+app.get('/categorias', (req, res) => {
+    try {
+        const categorias = db.getCategorias(req.query.user);
+        res.json(categorias);
+    } catch (error) {
+        res.status(500).send(error.message);
+    }
+});
 
 app.post('/tasks', (req, res) => {
     try {
         const task = db.addTask({
             text: req.body.text,
             datetime: req.body.datetime, 
-            user: req.body.user
+            user: req.body.user,
+            categoria: req.body.categoria
         });
         res.status(201).json(task);
     } catch (error) {
@@ -65,12 +74,12 @@ app.post('/tasks', (req, res) => {
     }
 });
 
-;
 // Endpoint para editar tarea
 app.put('/tasks/:id', async (req, res) => {
     const taskId = parseInt(req.params.id);
     const newText = req.body.text;
     const newDateTime = req.body.datetime;
+    const newCategoria = req.body.categoria;
 
     if (isNaN(taskId)) {
         return res.status(400).json({ error: 'ID de tarea inválido' });
@@ -86,7 +95,7 @@ app.put('/tasks/:id', async (req, res) => {
             return res.status(404).json({ error: 'Tarea no encontrada' });
         }
 
-        const updatedTask = db.updateTask(taskId, newText.trim(), newDateTime || null);
+        const updatedTask = db.updateTask(taskId, newText.trim(), newDateTime || null, newCategoria);
         return res.status(200).json(updatedTask);
 
     } catch (error) {

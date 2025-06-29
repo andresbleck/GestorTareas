@@ -32,7 +32,15 @@
             <div class="task-input-section">
                 <input type="text" id="newTask" placeholder="Nueva tarea" class="input-field">
                 <input type="datetime-local" id="taskDateTime" class="input-field">
+                <select id="categoriaSelect" class="input-field" style="max-width: 180px;"></select>
+                <input type="text" id="newCategoria" placeholder="Nueva categoría" class="input-field" style="max-width: 180px;">
                 <button onclick="addTask()" class="btn btn-add">Agregar</button>
+            </div>
+            <div class="filter-section">
+                <label for="filtroCategoria">Filtrar por categoría:</label>
+                <select id="filtroCategoria" class="input-field" style="max-width: 180px;" onchange="filtrarPorCategoria()">
+                    <option value="">Todas</option>
+                </select>
             </div>
             <ul id="taskList" class="task-list"></ul>
         </div>

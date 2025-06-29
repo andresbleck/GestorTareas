@@ -32,11 +32,15 @@ module.exports = {
 
     // Tareas
     addTask: (task) => {
+        if (!task.categoria || typeof task.categoria !== 'string' || !task.categoria.trim()) {
+            throw new Error('La categoría es obligatoria');
+        }
         const newTask = {
             id: Date.now(),
             text: task.text,
             datetime: task.datetime || null,
             user: task.user,
+            categoria: task.categoria.trim(),
             completed: false,
             createdAt: new Date().toISOString()
         };
@@ -51,16 +55,24 @@ module.exports = {
             .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
     },
 
+    getCategorias: (user) => {
+        // Devuelve categorías únicas para ese usuario
+        return [...new Set(data.tasks.filter(t => t.user === user).map(t => t.categoria))];
+    },
+
     getTaskById: (id) => {
         return data.tasks.find(t => t.id === id) || null;
     },
 
-    updateTask: (id, text, datetime) => {
+    updateTask: (id, text, datetime, categoria) => {
         const task = data.tasks.find(t => t.id === id);
         if (!task) throw new Error('Tarea no encontrada');
-        
+        if (!categoria || typeof categoria !== 'string' || !categoria.trim()) {
+            throw new Error('La categoría es obligatoria');
+        }
         task.text = text;
         task.datetime = datetime;
+        task.categoria = categoria.trim();
         task.updatedAt = new Date().toISOString();
         save();
         return task;

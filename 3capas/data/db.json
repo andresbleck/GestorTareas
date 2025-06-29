@@ -38,22 +38,34 @@
       "updatedAt": "2025-06-19T01:23:34.912Z"
     },
     {
-      "id": 1751145448885,
-      "text": "Ingles",
-      "datetime": "2025-06-28T22:00",
+      "id": 1751227017142,
+      "text": "Punto 2",
+      "datetime": "2025-06-05T18:00",
       "user": "juanbene10",
-      "completed": false,
-      "createdAt": "2025-06-28T21:17:28.885Z",
-      "updatedAt": "2025-06-28T21:41:43.827Z"
+      "categoria": "Economia",
+      "completed": true,
+      "createdAt": "2025-06-29T19:56:57.142Z",
+      "updatedAt": "2025-06-29T20:27:38.225Z"
     },
     {
-      "id": 1751146799961,
-      "text": "Economia",
-      "datetime": "2025-06-07T20:40",
+      "id": 1751227097434,
+      "text": "Ingresos de enero",
+      "datetime": "2025-06-19T19:00",
       "user": "juanbene10",
-      "completed": false,
-      "createdAt": "2025-06-28T21:39:59.961Z",
-      "updatedAt": "2025-06-28T21:41:47.780Z"
+      "categoria": "Petronorte",
+      "completed": true,
+      "createdAt": "2025-06-29T19:58:17.434Z",
+      "updatedAt": "2025-06-29T20:40:20.770Z"
+    },
+    {
+      "id": 1751227400912,
+      "text": "Punto 2,3,4",
+      "datetime": "2025-06-04T19:00",
+      "user": "juanbene10",
+      "categoria": "Religion",
+      "completed": true,
+      "createdAt": "2025-06-29T20:03:20.912Z",
+      "updatedAt": "2025-06-29T20:43:00.390Z"
     }
   ]
 }
