@@ -336,4 +336,31 @@
   
   .btn-pending:hover {
     background: #e0a800;
+  }
+  
+  .task-pending {
+    border-left-color: #ffc107 !important; /* amarillo */
+  }
+  
+  .task-overdue {
+    border-left-color: #dc3545 !important; /* rojo */
+  }
+  
+  .status-overdue {
+    background-color: #dc3545;
+    border: 2px solid #b52a37;
+  }
+  
+  .task-categoria-badge {
+    display: inline-block;
+    background-color: #60d6ff;
+    color: #fff;
+    padding: 6px 16px;
+    border-radius: 16px;
+    font-weight: 600;
+    font-size: 1em;
+    margin-bottom: 8px;
+    margin-right: 12px;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 8px rgba(96, 214, 255, 0.08);
   } 
