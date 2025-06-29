@@ -65,7 +65,36 @@
       "categoria": "Religion",
       "completed": true,
       "createdAt": "2025-06-29T20:03:20.912Z",
-      "updatedAt": "2025-06-29T20:43:00.390Z"
+      "updatedAt": "2025-06-29T22:43:18.624Z"
+    },
+    {
+      "id": 1751237112523,
+      "text": "Final",
+      "datetime": "2025-07-01T17:00",
+      "user": "juanbene10",
+      "categoria": "Desarrollo Web",
+      "completed": false,
+      "createdAt": "2025-06-29T22:45:12.523Z",
+      "updatedAt": "2025-06-29T22:45:32.541Z"
+    },
+    {
+      "id": 1751237152247,
+      "text": "Final ",
+      "datetime": "2025-06-20T19:45",
+      "user": "juanbene10",
+      "categoria": "Ingles",
+      "completed": false,
+      "createdAt": "2025-06-29T22:45:52.247Z"
+    },
+    {
+      "id": 1751237175703,
+      "text": "Final Oral",
+      "datetime": "2025-07-03T22:50",
+      "user": "juanbene10",
+      "categoria": "Ingles",
+      "completed": true,
+      "createdAt": "2025-06-29T22:46:15.703Z",
+      "updatedAt": "2025-06-29T22:46:17.046Z"
     }
   ]
 }
