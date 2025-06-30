@@ -11,22 +11,14 @@
   ],
   "tasks": [
     {
-      "id": 1749159941297,
-      "text": "Ir al medico",
-      "datetime": "2025-07-10T08:45",
-      "user": "andres04",
-      "completed": false,
-      "createdAt": "2025-06-05T21:45:41.297Z",
-      "updatedAt": "2025-06-05T22:02:43.158Z"
-    },
-    {
       "id": 1749160988470,
-      "text": "Ir de compras",
+      "text": "Comprar remedio",
       "datetime": "2025-06-10T13:00",
       "user": "andres04",
       "completed": false,
       "createdAt": "2025-06-05T22:03:08.470Z",
-      "updatedAt": "2025-06-05T22:03:19.996Z"
+      "updatedAt": "2025-06-30T11:36:37.701Z",
+      "categoria": "Salud"
     },
     {
       "id": 1749245978044,
@@ -35,7 +27,8 @@
       "user": "andres04",
       "completed": false,
       "createdAt": "2025-06-06T21:39:38.044Z",
-      "updatedAt": "2025-06-19T01:23:34.912Z"
+      "updatedAt": "2025-06-30T11:35:45.276Z",
+      "categoria": "Trabajo"
     },
     {
       "id": 1751227017142,
