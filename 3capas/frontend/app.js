@@ -144,17 +144,9 @@ function renderTasks(tasks) {
     tasks.forEach(task => {
         const li = document.createElement('li');
         const taskDate = task.datetime ? new Date(task.datetime).toLocaleString() : 'Sin fecha';
-        const buttonText = task.completed ? 'Marcar Pendiente' : 'Marcar Completada';
-        const buttonClass = task.completed ? 'btn-pending' : 'btn-complete';
-        let taskClass = '';
-        const isOverdue = !task.completed && task.datetime && new Date(task.datetime) < new Date();
-        if (task.completed) {
-            taskClass = 'task-completed';
-        } else if (isOverdue) {
-            taskClass = 'task-overdue';
-        } else {
-            taskClass = 'task-pending';
-        }
+        const buttonText = task.completed ? 'Completada' : 'Pendiente';
+        const buttonClass = task.completed ? 'btn-completed' : 'btn-pending';
+        const taskClass = task.completed ? 'task-completed' : 'task-pending';
         if (editingTaskId === task.id) {
             li.innerHTML = `
                 <div class="task-content ${taskClass}">
@@ -165,7 +157,6 @@ function renderTasks(tasks) {
                             <input type="datetime-local" id="edit-date-${task.id}" value="${task.datetime || ''}" class="input-field" style="max-width:180px;">
                             <input type="text" id="edit-categoria-${task.id}" value="${escapeHtml(task.categoria)}" placeholder="Categoría" class="input-field" style="max-width:180px;">
                         </div>
-                        ${!task.completed ? (isOverdue ? '<div class="task-status"><span class="status-dot status-overdue"></span><span class="status-text">Vencida</span></div>' : '<div class="task-status"><span class="status-dot status-pending"></span><span class="status-text">Pendiente</span></div>') : ''}
                     </div>
                     <div class="task-actions">
                         <button class="btn-success" onclick="saveTask(${task.id})">Guardar</button>
@@ -182,13 +173,12 @@ function renderTasks(tasks) {
                             <span class="task-text">${escapeHtml(task.text)}</span>
                             <span class="task-date">${taskDate}</span>
                         </div>
-                        ${!task.completed ? (isOverdue ? '<div class="task-status"><span class="status-dot status-overdue"></span><span class="status-text">Vencida</span></div>' : '<div class="task-status"><span class="status-dot status-pending"></span><span class="status-text">Pendiente</span></div>') : ''}
                     </div>
-                    ${(!task.completed && !isOverdue) ? `<div class="task-actions">
+                    <div class="task-actions">
                         <button class="${buttonClass}" onclick="toggleTaskComplete(${task.id})">${buttonText}</button>
                         <button class="btn-edit" onclick="startEdit(${task.id})">Editar</button>
                         <button class="btn-delete" onclick="deleteTask(${task.id})">Eliminar</button>
-                    </div>` : ''}
+                    </div>
                 </div>
             `;
         }

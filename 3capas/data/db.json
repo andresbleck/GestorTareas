@@ -43,9 +43,9 @@
       "datetime": "2025-06-05T18:00",
       "user": "juanbene10",
       "categoria": "Economia",
-      "completed": true,
+      "completed": false,
       "createdAt": "2025-06-29T19:56:57.142Z",
-      "updatedAt": "2025-06-29T20:27:38.225Z"
+      "updatedAt": "2025-06-30T02:21:31.914Z"
     },
     {
       "id": 1751227097434,
@@ -53,9 +53,9 @@
       "datetime": "2025-06-19T19:00",
       "user": "juanbene10",
       "categoria": "Petronorte",
-      "completed": true,
+      "completed": false,
       "createdAt": "2025-06-29T19:58:17.434Z",
-      "updatedAt": "2025-06-29T20:40:20.770Z"
+      "updatedAt": "2025-06-30T02:16:29.910Z"
     },
     {
       "id": 1751227400912,
@@ -63,38 +63,19 @@
       "datetime": "2025-06-04T19:00",
       "user": "juanbene10",
       "categoria": "Religion",
-      "completed": true,
-      "createdAt": "2025-06-29T20:03:20.912Z",
-      "updatedAt": "2025-06-29T22:43:18.624Z"
-    },
-    {
-      "id": 1751237112523,
-      "text": "Final",
-      "datetime": "2025-07-01T17:00",
-      "user": "juanbene10",
-      "categoria": "Desarrollo Web",
       "completed": false,
-      "createdAt": "2025-06-29T22:45:12.523Z",
-      "updatedAt": "2025-06-29T22:45:32.541Z"
+      "createdAt": "2025-06-29T20:03:20.912Z",
+      "updatedAt": "2025-06-30T02:21:28.777Z"
     },
     {
       "id": 1751237152247,
-      "text": "Final ",
+      "text": "Final",
       "datetime": "2025-06-20T19:45",
       "user": "juanbene10",
       "categoria": "Ingles",
       "completed": false,
-      "createdAt": "2025-06-29T22:45:52.247Z"
-    },
-    {
-      "id": 1751237175703,
-      "text": "Final Oral",
-      "datetime": "2025-07-03T22:50",
-      "user": "juanbene10",
-      "categoria": "Ingles",
-      "completed": true,
-      "createdAt": "2025-06-29T22:46:15.703Z",
-      "updatedAt": "2025-06-29T22:46:17.046Z"
+      "createdAt": "2025-06-29T22:45:52.247Z",
+      "updatedAt": "2025-06-30T03:44:01.379Z"
     }
   ]
 }
