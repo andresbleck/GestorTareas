@@ -73,9 +73,9 @@
       "datetime": "2025-06-20T19:45",
       "user": "juanbene10",
       "categoria": "Ingles",
-      "completed": true,
+      "completed": false,
       "createdAt": "2025-06-29T22:45:52.247Z",
-      "updatedAt": "2025-06-30T19:07:00.637Z"
+      "updatedAt": "2025-06-30T19:08:53.362Z"
     }
   ]
 }

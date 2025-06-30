@@ -85,7 +85,7 @@ h2 {
 }
 
 .btn-register {
-  background-color: #4169E1;
+  background-color: #bbc4de;
   color: white;
   flex: 1;
 }
@@ -132,14 +132,14 @@ h2 {
 }
 
 .btn-logout {
-  background-color: #FF1493;
+  background-color: #f22641e1;
   color: white;
   padding: 10px 20px;
   font-size: 0.9em;
 }
 
 .btn-logout:hover {
-  background-color: #ff0084;
+  background-color: #ef1a36e1;
 }
 
 .task-list {
@@ -219,7 +219,7 @@ h2 {
 }
 
 .btn-delete {
-  background-color: #FF1493;
+  background-color: #f22641e1;
   color: white;
   padding: 8px 16px;
   border-radius: 6px;
@@ -227,7 +227,7 @@ h2 {
 }
 
 .btn-delete:hover {
-  background-color: #ff0084;
+  background-color: #f00f2de1;
 }
 
 .edit-buttons {
@@ -259,7 +259,7 @@ h2 {
 }
 
 .btn-cancel {
-  background-color: #FF1493;
+  background-color: #f22641e1;
   color: white;
   padding: 8px 16px;
   border-radius: 6px;
@@ -270,7 +270,7 @@ h2 {
 }
 
 .btn-cancel:hover {
-  background-color: #ff0084;
+  background-color: #f11230e1;
 }
 
 .edit-task-content input[type="text"],
