@@ -100,8 +100,8 @@ function renderTasks(tasks) {
     tasks.forEach(task => {
         const li = document.createElement('li');
         const taskDate = task.datetime ? new Date(task.datetime).toLocaleString() : 'Sin fecha';
-        const buttonText = task.completed ? 'Completada' : 'Pendiente';
-        const buttonClass = task.completed ? 'btn-completed' : 'btn-pending';
+        const buttonText = task.completed ? 'Pendiente' : 'Completada';
+        const buttonClass = buttonText === 'Completada' ? 'btn-completed' : 'btn-pending';
         const taskClass = task.completed ? 'task-completed' : 'task-pending';
         if (editingTaskId === task.id) {
             li.innerHTML = `
