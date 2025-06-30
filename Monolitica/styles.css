@@ -6,7 +6,7 @@
   }
   
   body {
-    background-color: #4ca9f0;
+    background-color: #b8d1e5;
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -132,14 +132,14 @@
   }
   
   .btn-logout {
-    background-color: #FF1493;
+    background-color: #f22641e1;
     color: white;
     padding: 10px 20px;
     font-size: 0.9em;
   }
   
   .btn-logout:hover {
-    background-color: #ff0084;
+    background-color: #ec1a36e1;
   }
   
   .task-list {
@@ -219,7 +219,7 @@
   }
   
   .btn-delete {
-    background-color: #FF1493;
+    background-color: #f22641e1;
     color: white;
     padding: 8px 16px;
     border-radius: 6px;
@@ -227,7 +227,7 @@
   }
   
   .btn-delete:hover {
-    background-color: #ff0084;
+    background-color:#e91834e1;
   }
   
   .edit-buttons {
